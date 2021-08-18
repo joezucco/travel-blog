@@ -34,7 +34,7 @@ export default function Home({ posts }) {
     <div>
       <Toolbar />
       <div className={styles.main}>
-        <h2>I travel so you don't have to...</h2>
+        <h2>I travel so you don&apos;t have to...</h2>
 
         <div className={styles.feed}>
           {mappedPosts.length ? (
