@@ -1,10 +1,21 @@
-import { Head } from 'next/head'
+import { Head } from "next/head";
 import styles from "../styles/Home.module.css";
 import { Toolbar } from "../components/toolbar";
-import  imageUrlBuilder from "@sanity/image-url";
+import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import  Image  from "next/image"
+import { datadogRum } from "@datadog/browser-rum";
+
+datadogRum.init({
+  applicationId: "a0c1760d-b5e1-48fe-8a99-a60b93098905",
+  clientToken: "pub7dd881ed062312465ebd1c1047064a3b",
+  site: "datadoghq.com",
+  service: "todo",
+  // Specify a version number to identify the deployed version of your application in Datadog
+  // version: '1.0.0',
+  sampleRate: 100,
+  trackInteractions: true,
+});
 
 export default function Home({ posts }) {
   const router = useRouter();

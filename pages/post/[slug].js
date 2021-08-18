@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import styles from "../../styles/Post.module.css";
 import BlockContent from "@sanity/block-content-to-react";
 import { Toolbar } from "../../components/toolbar";
-import Image from "next/image"
 
 export const Post = ({ title, body, image }) => {
   const [imageUrl, setImageUrl] = useState("");
