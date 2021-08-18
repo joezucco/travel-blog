@@ -60,7 +60,6 @@ export const getServerSideProps = async (pageContext) => {
         title: post.title,
         image: post.mainImage,
       },
-      revalidate: 1
     };
   }
 };
