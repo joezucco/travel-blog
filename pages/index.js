@@ -22,6 +22,7 @@ export default function Home({ posts }) {
           return {
             ...p,
             mainImage: imgBuilder.image(p.mainImage).width(500).height(250),
+            revalidate: 1,
           };
         })
       );
