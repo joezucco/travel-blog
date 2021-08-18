@@ -1,9 +1,9 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import  styles  from "../styles/Home.module.css";
 import { Toolbar } from "../components/toolbar";
-import imageUrlBuilder from "@sanity/image-url";
+import  imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import { Image } from "next/image"
 
 export default function Home({ posts }) {
   const router = useRouter();
@@ -44,7 +44,11 @@ export default function Home({ posts }) {
                 className={styles.post}
               >
                 <h3>{p.title}</h3>
-                <img className={styles.mainImage} src={p.mainImage} />
+                <img
+                  className={styles.mainImage}
+                  src={p.mainImage}
+                  alt='description'
+                />
               </div>
             ))
           ) : (
